@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Page</title>
+    <script>
+        function setLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('title').innerText = 'Welcome to My GitHub Page';
+                document.getElementById('description').innerText = 'This is a simple page to host my app-ads.txt file.';
+                document.getElementById('readme-link').innerText = 'Go to README.md';
+                document.getElementById('language-button').innerText = 'English';
+            } else if (lang === 'vi') {
+                document.getElementById('title').innerText = 'Chào mừng đến với trang GitHub của tôi';
+                document.getElementById('description').innerText = 'Đây là một trang đơn giản để lưu trữ tệp app-ads.txt của tôi.';
+                document.getElementById('readme-link').innerText = 'Đi đến README.md';
+                document.getElementById('language-button').innerText = 'Tiếng Việt';
+            } else if (lang === 'de') {
+                document.getElementById('title').innerText = 'Willkommen auf meiner GitHub-Seite';
+                document.getElementById('description').innerText = 'Dies ist eine einfache Seite, um meine app-ads.txt-Datei zu hosten.';
+                document.getElementById('readme-link').innerText = 'Gehe zu README.md';
+                document.getElementById('language-button').innerText = 'Deutsch';
+            }
+            document.getElementById('dropdown').style.display = 'none';
+        }
+
+        function toggleDropdown() {
+            var dropdown = document.getElementById('dropdown');
+            if (dropdown.style.display === 'none') {
+                dropdown.style.display = 'block';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">Welcome to My GitHub Page</h1>
+    <p id="description">This is a simple page to host my app-ads.txt file.</p>
+    <p><a id="readme-link" href="README.md">Go to README.md</a></p>
+    <div>
+        <button id="language-button" onclick="toggleDropdown()">English</button>
+        <div id="dropdown" style="display: none;">
+            <p onclick="setLanguage('en')">English</p>
+            <p onclick="setLanguage('vi')">Tiếng Việt</p>
+            <p onclick="setLanguage('de')">Deutsch</p>
+        </div>
+    </div>
+</body>
+</html>
