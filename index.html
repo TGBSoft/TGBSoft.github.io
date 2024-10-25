@@ -1,83 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            margin-bottom: 10px;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-    </style>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="german_grammar">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>german_grammar</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "4173489611";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>John Doe</h1>
-        <p>Email: john.doe@example.com | Phone: (123) 456-7890</p>
-
-        <div class="section">
-            <h2>Profile</h2>
-            <p>A motivated and enthusiastic individual with a passion for web development and a strong desire to learn and grow in the tech industry.</p>
-        </div>
-
-        <div class="section">
-            <h2>Experience</h2>
-            <h3>Web Developer</h3>
-            <p>ABC Company | Jan 2021 - Present</p>
-            <ul>
-                <li>Developed and maintained the company website.</li>
-                <li>Implemented new features and optimized existing ones.</li>
-                <li>Collaborated with designers and backend developers.</li>
-            </ul>
-            <h3>Intern Developer</h3>
-            <p>XYZ Company | Jun 2020 - Dec 2020</p>
-            <ul>
-                <li>Assisted in the development of web applications.</li>
-                <li>Conducted testing and debugging.</li>
-                <li>Participated in team meetings and brainstorming sessions.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <h3>Bachelor of Science in Computer Science</h3>
-            <p>University of Somewhere | 2017 - 2021</p>
-        </div>
-
-        <div class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Angular</li>
-                <li>Node.js, Express</li>
-                <li>Git, GitHub</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Projects</h2>
-            <h3>Personal Portfolio</h3>
-            <p>A personal website to showcase my work and skills. Built using React and hosted on GitHub Pages.</p>
-        </div>
-    </div>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
