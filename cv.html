@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điền Vũ</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        
+      }
+      .container {
+        width: 210mm;
+        margin: 10 auto;
+        padding: 20px;
+      }
+      header {
+        background: #333;
+        width: 210mm;
+        color: #fff;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .header-content {
+        flex: 1;
+        text-align: left;
+        margin-top: 50px;
+      }
+      .profile-pic {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-right: 20px;
+        margin-top: 50px;
+      }
+      .language-selector {
+        position: absolute;
+        margin-top: 50px;
+        top: 10px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="assets/profile-pic.jpg"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+      </div>
+
+      <div class="header-content">
+        <h3>Vũ Văn Điền</h3>
+        <h4>
+          <p>Technical Manager</p>
+          <p>Automation Engineer</p>
+          <p>Mobile Application Developer</p>
+        </h4>
+        <p>Email: dienvu1008@gmail.com | Điện thoại: 0373525123</p>
+      </div>
+      <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="vi">Tiếng Việt</option>
+          <option value="de">Deutsch</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="section">
+        <h2 class="section-title">Giới Thiệu</h2>
+        <p id="introduction">
+          I was an experienced automation engineer and have had management
+          experience. I am also interested in mobile software development and
+          machine learning and also have experience in this field. So i can work
+          as a technical manager, an automation engineer or an android
+          developer. In 2021, I quit my job as an automation engineer and
+          started my own startup project. I developed an android application
+          myself and released it on the Play Store. You can find this app at the
+          link below:
+        </p>
+        <p id="playstoreLink">
+          https://play.google.com/store/apps/details?id=com.dienvu.timemanager.pro
+        </p>
+        <p id="downloadLink">Or download the trial Apk file here:</p>
+        <p>
+          https://drive.google.com/file/d/1aEBKYOntCcOw5Ot-mWkhBiCjfTjjNSbF/view?usp=share_link
+        </p>
+        <p id="selfLearning">
+          I have a strong ability of self-learning and finding solution myself.
+          I don't mind learning new solutions and can work with high intensity.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title" id="experienceTitle">Kinh Nghiệm Làm Việc</h2>
+        <h3>Công Ty ABC</h3>
+        <p><strong>Vị Trí:</strong> Nhà Phát Triển Web</p>
+        <p><strong>Thời Gian:</strong> Tháng 1/2020 - Tháng 12/2022</p>
+        <ul>
+          <li>Phát triển và duy trì các trang web.</li>
+          <li>Tối ưu hóa hiệu suất và khả năng truy cập của trang web.</li>
+          <li>
+            Hợp tác với các nhóm khác để xác định yêu cầu và phát triển giải
+            pháp.
+          </li>
+        </ul>
+
+        <h3>Công Ty XYZ</h3>
+        <p><strong>Vị Trí:</strong> Kỹ Sư Phần Mềm</p>
+        <p><strong>Thời Gian:</strong> Tháng 6/2017 - Tháng 12/2019</p>
+        <ul>
+          <li>
+            Tham gia vào quá trình phát triển phần mềm từ giai đoạn thiết kế đến
+            triển khai.
+          </li>
+          <li>Viết và tối ưu hóa mã nguồn.</li>
+          <li>Đảm bảo chất lượng và bảo mật của phần mềm.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title" id="educationTitle">Học Vấn</h2>
+        <h3>Đại Học DEF</h3>
+        <p><strong>Bằng Cấp:</strong> Cử Nhân Công Nghệ Thông Tin</p>
+        <p><strong>Thời Gian:</strong> Tháng 9/2013 - Tháng 6/2017</p>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title" id="skillsTitle">Kỹ Năng</h2>
+        <ul>
+          <li>Ngôn Ngữ Lập Trình: HTML, CSS, JavaScript, Python</li>
+          <li>Công Cụ và Công Nghệ: Git, Docker, Jenkins</li>
+          <li>Kỹ Năng Mềm: Làm Việc Nhóm, Giải Quyết Vấn Đề, Giao Tiếp</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      function changeLanguage() {
+        var language = document.getElementById("languageSelect").value;
+
+        if (language === "en") {
+          document.getElementById("introduction").innerText =
+            "I was an experienced automation engineer and have had management experience. I am also interested in mobile software development and machine learning and also have experience in this field. So i can work as a technical manager, an automation engineer or an android developer. In 2021, I quit my job as an automation engineer and started my own startup project. I developed an android application myself and released it on the Play Store. You can find this app at the link below:";
+          document.getElementById("experienceTitle").innerText =
+            "Work Experience";
+          document.getElementById("educationTitle").innerText = "Education";
+          document.getElementById("skillsTitle").innerText = "Skills";
+        } else if (language === "vi") {
+          document.getElementById("introduction").innerText =
+            "Tôi là một kỹ sư tự động hóa có kinh nghiệm và đã từng có kinh nghiệm quản lý. Tôi cũng quan tâm đến phát triển phần mềm di động và học máy và cũng có kinh nghiệm trong lĩnh vực này. Vì vậy, tôi có thể làm việc như một nhà quản lý kỹ thuật, một kỹ sư tự động hóa hoặc một nhà phát triển ứng dụng android. Năm 2021, tôi nghỉ việc kỹ sư tự động hóa và bắt đầu dự án khởi nghiệp của riêng mình. Tôi đã tự phát triển một ứng dụng android và phát hành nó trên Play Store. Bạn có thể tìm thấy ứng dụng này tại liên kết dưới đây:";
+          document.getElementById("experienceTitle").innerText =
+            "Kinh Nghiệm Làm Việc";
+          document.getElementById("educationTitle").innerText = "Học Vấn";
+          document.getElementById("skillsTitle").innerText = "Kỹ Năng";
+        } else if (language === "de") {
+          document.getElementById("introduction").innerText =
+            "Ich war ein erfahrener Automatisierungsingenieur und habe Managementerfahrung. Ich interessiere mich auch für die Entwicklung mobiler Software und maschinelles Lernen und habe auch Erfahrung auf diesem Gebiet. Daher kann ich als technischer Manager, Automatisierungsingenieur oder Android-Entwickler arbeiten. Im Jahr 2021 kündigte ich meinen Job als Automatisierungsingenieur und startete mein eigenes Startup-Projekt. Ich habe selbst eine Android-Anwendung entwickelt und im Play Store veröffentlicht. Sie können diese App unter dem folgenden Link finden:";
+          document.getElementById("experienceTitle").innerText =
+            "Berufserfahrung";
+          document.getElementById("educationTitle").innerText = "Bildung";
+          document.getElementById("skillsTitle").innerText = "Fähigkeiten";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
