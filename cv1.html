@@ -1,165 +1,349 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV của Tôi</title>
+    <title>Vũ Văn Điền</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #fff;
-        }
-        .header-banner {
-            width: 210mm; /* A4 width */
-            height: 297mm; /* A4 height */
-            background: #fff;
-            padding: 20px;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            
-        }
-        .header-content {
-            flex: 1;
-            text-align: left;
-            margin-top: 50px;
-        }
-        .profile-pic {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-right: 20px;
-            margin-top: 50px;
-        }
-        .language-selector {
-            position: absolute;
-            margin-top: 50px;
-            top: 10px;
-            right: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section-title {
-            background: #f4f4f4;
-            padding: 10px;
-            border-left: 5px solid #333;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fff;
+      }
+      .header-banner {
+        width: 210mm; /* A4 width */
+        height: 297mm; /* A4 height */
+        background: #fff;
+        padding: 20px;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      }
+      .header-content {
+        flex: 1;
+        text-align: left;
+        margin-top: 50px;
+      }
+      .header-content h4 {
+        margin: 0;
+        padding: 0;
+        line-height: 1.2; /* Điều chỉnh line-height để khoảng cách giữa các dòng hợp lý hơn */
+      }
+      .header-content p {
+        margin: 0;
+      }
+      .profile-pic {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-right: 20px;
+        margin-top: 50px;
+      }
+      .qr-code-img {
+        width: 130px;
+        height: 130px;
+        margin-top: 60px; /* Thêm khoảng cách trên nếu cần */
+      }
+      .qr-code-app-link-img {
+        width: 130px;
+        height: 130px;
+      }
+      .language-selector {
+        position: absolute;
+        margin-top: 50px;
+        top: 10px;
+        right: 20px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .section-title {
+        background: #f4f4f4;
+        padding: 10px;
+        border-left: 5px solid #333;
+        font-size: 22px;
+      }
+      .divider {
+        border: 0;
+        height: 1px;
+        background: #ccc; /* Màu sắc của đường phân cách */
+        margin: 20px 0; /* Khoảng cách trên và dưới của đường phân cách */
+      }
+      .link-highlight {
+        color: blue; /* Màu xanh */
+        text-decoration: underline; /* Gạch chân */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header-banner">
-        <header>
-            <img src="assets/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
-            <div class="header-content">
-                <h3>Vũ Văn Điền</h3>
-                <h4>
-                    <p>Technical Manager</p>
-                    <p>Automation Engineer</p>
-                    <p>Mobile Application Developer</p>
-                </h4>
-                <p>Email: dienvu1008@gmail.com | Điện thoại: 0373525123</p>
-            </div>
-            <div class="language-selector">
-                <select id="languageSelect" onchange="changeLanguage()">
-                    <option value="en">English</option>
-                    <option value="vi">Tiếng Việt</option>
-                    <option value="de">Deutsch</option>
-                </select>
-            </div>
-        </header>
-        
-        <div class="container">
-            <div class="section">
-                <h2 class="section-title">Giới Thiệu</h2>
-                <p id="introduction">I was an experienced automation engineer and have had management experience. I am also interested in mobile software development and machine learning and also have experience in this field. So i can work as a technical manager, an automation engineer or an android developer. In 2021, I quit my job as an automation engineer and started my own startup project. I developed an android application myself and released it on the Play Store. You can find this app at the link below:</p>
-                <p id="playstoreLink">https://play.google.com/store/apps/details?id=com.dienvu.timemanager.pro</p>
-                <p id="downloadLink">Or download the trial Apk file here:</p>
-                <p>https://drive.google.com/file/d/1aEBKYOntCcOw5Ot-mWkhBiCjfTjjNSbF/view?usp=share_link</p>
-                <p id="selfLearning">I have a strong ability of self-learning and finding solution myself. I don't mind learning new solutions and can work with high intensity.</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title" id="experienceTitle">Kinh Nghiệm Làm Việc</h2>
-                <h3>Công Ty ABC</h3>
-                <p><strong>Vị Trí:</strong> Nhà Phát Triển Web</p>
-                <p><strong>Thời Gian:</strong> Tháng 1/2020 - Tháng 12/2022</p>
-                <ul>
-                    <li>Phát triển và duy trì các trang web.</li>
-                    <li>Tối ưu hóa hiệu suất và khả năng truy cập của trang web.</li>
-                    <li>Hợp tác với các nhóm khác để xác định yêu cầu và phát triển giải pháp.</li>
-                </ul>
-                
-                <h3>Công Ty XYZ</h3>
-                <p><strong>Vị Trí:</strong> Kỹ Sư Phần Mềm</p>
-                <p><strong>Thời Gian:</strong> Tháng 6/2017 - Tháng 12/2019</p>
-                <ul>
-                    <li>Tham gia vào quá trình phát triển phần mềm từ giai đoạn thiết kế đến triển khai.</li>
-                    <li>Viết và tối ưu hóa mã nguồn.</li>
-                    <li>Đảm bảo chất lượng và bảo mật của phần mềm.</li>
-                </ul>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title" id="educationTitle">Học Vấn</h2>
-                <h3>Đại Học Bách Khoa Hà Nội</h3>
-                <p><strong>Bằng Cấp:</strong> Kỹ sư điều khiển tự động</p>
-                <p><strong>Thời Gian:</strong> Tháng 9/2005 - Tháng 6/2010</p>
-            </div>
-            
-            <div class="section">
-                <h2 class="section-title" id="skillsTitle">Kỹ Năng</h2>
-                <ul>
-                    <li>Ngôn Ngữ Lập Trình: HTML, CSS, JavaScript, Python</li>
-                    <li>Công Cụ và Công Nghệ: Git, Docker, Jenkins</li>
-                    <li>Kỹ Năng Mềm: Làm Việc Nhóm, Giải Quyết Vấn Đề, Giao Tiếp</li>
-                </ul>
-            </div>
+      <header>
+        <img
+          src="assets/profile-pic.jpg"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+        <div class="header-content">
+          <h3>Vũ Văn Điền</h3>
+          <h4>
+            <p id="technicalManager">Technical Manager</p>
+            <p id="automationEngineer">Automation Engineer</p>
+            <p id="crossPlatformDeveloper">Cross-Platform Developer</p>
+          </h4>
+          <br />
+          <p>Email: dienvu1008@gmail.com</p>
+          <p id="phoneNumber">Phone Number: 0373525123</p>
         </div>
+        <div class="language-selector">
+          <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en"><p id="english">English</p></option>
+            <option value="de"><p id="german">German</p></option>
+            <option value="vi"><p id="vietnamese">Vietnamese</p></option>
+          </select>
+        </div>
+        <!-- Thêm thẻ <img> cho mã QR dưới đây -->
+        <div class="cv-link">
+          <a href="https://tgbsoft.github.io/cv1.html" target="_blank">
+            <img src="assets/cv-link.jpg" alt="QR Code" class="qr-code-img" />
+          </a>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="section">
+          <h2 class="section-title" id="about me">About Me</h2>
+          <p id="introduction">
+            Xin chào, tôi là một kỹ sư tự động hóa đam mê công nghệ và sáng tạo.
+            Với nhiều kinh nghiệm trong lĩnh vực tự động hóa, tôi đã góp phần
+            tối ưu hóa quy trình và hệ thống cho nhiều dự án. Ngoài ra, tôi còn
+            là một lập trình viên đa nền tảng, có khả năng phát triển ứng dụng
+            trên Android, iOS, web, Windows, macOS và Linux. Tôi có thế mạnh
+            trong việc tự học hỏi và tự tìm các giải pháp để giải quyết vấn đề.
+            Tôi không ngại học hỏi các giải pháp mới và có thể làm việc với
+            cường độ cao. Rất hân hạnh được hợp tác và chia sẻ kiến thức với các
+            bạn.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title" id="experienceTitle">
+            Kinh nghiệm làm việc
+          </h2>
+          <h3>Freelancer cross-platform developer</h3>
+          <p>
+            <strong id="position">Vị trí:</strong> Lập trình viên phát triển ứng
+            dụng đa nền tảng
+          </p>
+          <p><strong id="period">Thời gian:</strong> 2021 - Hiện tại</p>
+          <p><strong id="details">Chi tiết công việc:</strong></p>
+          <ul>
+            <li>
+              Phát triển các ứng dụng di động cho các nền tảng Android, iOs,
+              Windows, MacOs, Linux
+            </li>
+            <li>Tạo ứng dụng di động trên Play Store</li>
+          </ul>
+          <p>
+            <strong
+              >Bạn có thể xem một số ứng dụng tôi đã phát triển
+              <a
+                href="https://play.google.com/store/apps/developer?id=TGB+Soft"
+                target="_blank"
+                class="link-highlight"
+                >tại đây</a
+              >:
+            </strong>
+          </p>
+
+          <a
+            href="https://play.google.com/store/apps/developer?id=TGB+Soft"
+            target="_blank"
+          >
+            <img
+              src="assets/my-app-link.jpg"
+              alt="QR Code"
+              class="qr-code-app-link-img"
+            />
+          </a>
+
+          <hr class="divider" />
+          <h3>Công ty cổ phần lắp ráp ô tô Hyundai Thành Công Việt Nam</h3>
+          <p><strong id="position">Vị trí:</strong> Trưởng nhóm tự động hóa</p>
+          <p><strong id="period">Thời gian:</strong>2019- 2021</p>
+          <p><strong id="details">Chi tiết công việc:</strong></p>
+          <ul>
+            <li>
+              Tối ưu chương trình sản xuất cho các bộ điều khiển khả trình (PLC)
+              trong nhà máy.
+            </li>
+            <li>Viết và tối ưu hóa mã nguồn.</li>
+            <li>Đảm bảo chất lượng và bảo mật của phần mềm.</li>
+          </ul>
+          <hr class="divider" />
+          <h3>Công ty trách nhiệm hữu hạn Niềm Tin</h3>
+          <p>
+            <strong id="position">Vị Trí:</strong> Kỹ sư tự động hóa tòa nhà
+            thông minh
+          </p>
+          <p><strong id="period">Thời Gian:</strong>2010- 2013</p>
+          <p><strong id="details">Chi tiết công việc:</strong></p>
+          <ul>
+            <li>
+              Thiết kế hệ thống điện,hệ thống điều hòa thông gió, hệ thống báo-
+              chữa cháy,
+            </li>
+            <li>Viết và tối ưu hóa mã nguồn.</li>
+            <li>Đảm bảo chất lượng và bảo mật của phần mềm.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title" id="educationTitle">Học Vấn</h2>
+          <h3>Đại Học Kỹ Thuật Berlin</h3>
+          <p><strong id="degree">Bằng Cấp:</strong> MSc Electrotechnik</p>
+          <p><strong id="period">Thời Gian:</strong> 2014-2018</p>
+          <hr class="divider" />
+          <h3>Đại Học Bách Khoa Hà Nội</h3>
+          <p><strong id="degree">Bằng Cấp:</strong> Kỹ sư điều khiển tự động</p>
+          <p>
+            <strong id="period">Thời Gian:</strong> Tháng 9/2005 - Tháng 6/2010
+          </p>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title" id="skillsTitle">Kỹ Năng</h2>
+          <ul>
+            <li>Ngôn Ngữ Lập Trình: HTML, CSS, JavaScript, Python</li>
+            <li>Công Cụ và Công Nghệ: Git, Docker, Jenkins</li>
+            <li>Kỹ Năng Mềm: Làm Việc Nhóm, Giải Quyết Vấn Đề, Giao Tiếp</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <script>
-        function changeLanguage() {
-          var language = document.getElementById("languageSelect").value;
-  
-          if (language === "en") {
-            document.getElementById("introduction").innerText =
-              "I was an experienced automation engineer and have had management experience. I am also interested in mobile software development and machine learning and also have experience in this field. So i can work as a technical manager, an automation engineer or an android developer. In 2021, I quit my job as an automation engineer and started my own startup project. I developed an android application myself and released it on the Play Store. You can find this app at the link below:";
-            document.getElementById("experienceTitle").innerText =
-              "Work Experience";
-            document.getElementById("educationTitle").innerText = "Education";
-            document.getElementById("skillsTitle").innerText = "Skills";
-          } else if (language === "vi") {
-            document.getElementById("introduction").innerText =
-              "Tôi là một kỹ sư tự động hóa có kinh nghiệm và đã từng có kinh nghiệm quản lý. Tôi cũng quan tâm đến phát triển phần mềm di động và học máy và cũng có kinh nghiệm trong lĩnh vực này. Vì vậy, tôi có thể làm việc như một nhà quản lý kỹ thuật, một kỹ sư tự động hóa hoặc một nhà phát triển ứng dụng android. Năm 2021, tôi nghỉ việc kỹ sư tự động hóa và bắt đầu dự án khởi nghiệp của riêng mình. Tôi đã tự phát triển một ứng dụng android và phát hành nó trên Play Store. Bạn có thể tìm thấy ứng dụng này tại liên kết dưới đây:";
-            document.getElementById("experienceTitle").innerText =
-              "Kinh Nghiệm Làm Việc";
-            document.getElementById("educationTitle").innerText = "Học Vấn";
-            document.getElementById("skillsTitle").innerText = "Kỹ Năng";
-          } else if (language === "de") {
-            document.getElementById("introduction").innerText =
-              "Ich war ein erfahrener Automatisierungsingenieur und habe Managementerfahrung. Ich interessiere mich auch für die Entwicklung mobiler Software und maschinelles Lernen und habe auch Erfahrung auf diesem Gebiet. Daher kann ich als technischer Manager, Automatisierungsingenieur oder Android-Entwickler arbeiten. Im Jahr 2021 kündigte ich meinen Job als Automatisierungsingenieur und startete mein eigenes Startup-Projekt. Ich habe selbst eine Android-Anwendung entwickelt und im Play Store veröffentlicht. Sie können diese App unter dem folgenden Link finden:";
-            document.getElementById("experienceTitle").innerText =
-              "Berufserfahrung";
-            document.getElementById("educationTitle").innerText = "Bildung";
-            document.getElementById("skillsTitle").innerText = "Fähigkeiten";
-          }
-        }
-      </script>
-    </body>
-  </html>
-  
+      const translations = {
+        en: {
+          introduction:
+            "Xin chào, tôi là một kỹ sư tự động hóa đam mê công nghệ " +
+            "và sự sáng tạo. Với nhiều kinh nghiệm trong lĩnh vực tự động hóa, " +
+            "tôi đã góp phần tối ưu hóa quy trình và hệ thống cho nhiều dự án. " +
+            "Ngoài ra, tôi còn là một lập trình viên đa nền tảng, có khả năng " +
+            "phát triển ứng dụng trên Android, iOS, web, Windows, macOS và Linux. " +
+            "Tôi có thế mạnh trong việc tự học hỏi và tự tìm các giải pháp để giải quyết vấn đề. " +
+            "Tôi không ngại học hỏi các giải pháp mới và có thể làm việc với cường độ cao. " +
+            "Rất hân hạnh được hợp tác và chia sẻ kiến thức với các bạn.",
+          experienceTitle: "Work Experience",
+          educationTitle: "Education",
+          skillsTitle: "Skills",
+          aboutMe: "About Me",
+          english: "English",
+          german: "German",
+          vietnamese: "Vietnamese",
+          technicalManager: "Technical Manager",
+          automationEngineer: "Automation Engineer",
+          crossPlatformDeveloper: "Cross-Platform Developer",
+          phoneNumber: "Phone Number: 0373525123",
+          degree: "Degree:",
+          period: "Period:",
+          position: "Position:",
+          details: "Details:",
+        },
+        vi: {
+          introduction:
+            "Xin chào, tôi là một kỹ sư tự động hóa đam mê công nghệ " +
+            "và sáng tạo. Với nhiều kinh nghiệm trong lĩnh vực tự động hóa, " +
+            "tôi đã góp phần tối ưu hóa quy trình và hệ thống cho nhiều dự án. " +
+            "Ngoài ra, tôi còn là một lập trình viên đa nền tảng, có khả năng " +
+            "phát triển ứng dụng trên Android, iOS, web, Windows, macOS và Linux. " +
+            "Tôi có thế mạnh trong việc tự học hỏi và tự tìm các giải pháp để giải quyết vấn đề. " +
+            "Tôi không ngại học hỏi các giải pháp mới và có thể làm việc với cường độ cao. " +
+            "Rất hân hạnh được hợp tác và chia sẻ kiến thức với các bạn.",
+
+          experienceTitle: "Kinh Nghiệm Làm Việc",
+          educationTitle: "Học Vấn",
+          skillsTitle: "Kỹ Năng",
+          aboutMe: "Giới thiệu",
+          english: "Tiếng Anh",
+          german: "Tiếng Đức",
+          vietnamese: "Tiếng Việt",
+          technicalManager: "Quản lý kỹ thuật",
+          automationEngineer: "Kỹ sư tự động hóa",
+          crossPlatformDeveloper: "Kỹ sư lập trình ứng dụng đa nền tảng",
+          phoneNumber: "Số điện thoại: 0373525123",
+          degree: "Bằng cấp:",
+          period: "Thời gian:",
+          position: "Vị trí làm việc:",
+          details: "Chi tiết công việc:",
+        },
+        de: {
+          introduction:
+            "Xin chào, tôi là một kỹ sư tự động hóa đam mê công nghệ " +
+            "và sự sáng tạo. Với nhiều kinh nghiệm trong lĩnh vực tự động hóa, " +
+            "tôi đã góp phần tối ưu hóa quy trình và hệ thống cho nhiều dự án. " +
+            "Ngoài ra, tôi còn là một lập trình viên đa nền tảng, có khả năng " +
+            "phát triển ứng dụng trên Android, iOS, web, Windows, macOS và Linux. " +
+            "Tôi có thế mạnh trong việc tự học hỏi và tự tìm các giải pháp để giải quyết vấn đề. " +
+            "Tôi không ngại học hỏi các giải pháp mới và có thể làm việc với cường độ cao. " +
+            "Rất hân hạnh được hợp tác và chia sẻ kiến thức với các bạn.",
+
+          experienceTitle: "Berufserfahrung",
+          educationTitle: "Bildung",
+          skillsTitle: "Fähigkeiten",
+          aboutMe: "Über mich",
+          english: "Englisch",
+          german: "Deutsch",
+          vietnamese: "Vietnamesisch",
+          technicalManager: "Technischer Manager",
+          automationEngineer: "Automatisierungsingenieur",
+          crossPlatformDeveloper: "Cross-Platform Entwickler",
+          phoneNumber: "Telefonnummer: 0373525123",
+          degree: "Abschluss:",
+          period: "Zeitraum:",
+          position: "Position:",
+          details: "Einzelheiten:",
+        },
+      };
+
+      function changeLanguage() {
+        var language = document.getElementById("languageSelect").value;
+        var langData = translations[language];
+        document.getElementById("english").innerText = langData.english;
+        document.getElementById("german").innerText = langData.german;
+        document.getElementById("vietnamese").innerText = langData.vietnamese;
+        document.getElementById("introduction").innerText =
+          langData.introduction;
+        document.getElementById("experienceTitle").innerText =
+          langData.experienceTitle;
+        document.getElementById("educationTitle").innerText =
+          langData.educationTitle;
+        document.getElementById("skillsTitle").innerText = langData.skillsTitle;
+        document.getElementById("about me").innerText = langData.aboutMe;
+        document.getElementById("technicalManager").innerText =
+          langData.technicalManager;
+        document.getElementById("automationEngineer").innerText =
+          langData.automationEngineer;
+        document.getElementById("crossPlatformDeveloper").innerText =
+          langData.crossPlatformDeveloper;
+        document.getElementById("phoneNumber").innerText = langData.phoneNumber;
+        document.getElementById("position").innerText = langData.position;
+        document.getElementById("details").innerText = langData.details;
+        document.getElementById("period").innerText = langData.period;
+        document.getElementById("degree").innerText = langData.degree;
+      }
+    </script>
+  </body>
+</html>
