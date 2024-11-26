@@ -163,7 +163,8 @@
           <h2 class="section-title" id="experienceTitle">Work Experience</h2>
           <h3>Freelancer Cross-Platform Developer</h3>
           <p>
-            <strong id="position1">Position:</strong> Cross-Platform Developer
+            <strong id="position1">Position:</strong>
+            <span id="crossPlatformDeveloper2">Cross-Platform Developer</span>
           </p>
           <p><strong id="period1">Period:</strong> 2021 - Present</p>
           <p><strong id="details1">Details:</strong></p>
@@ -234,8 +235,6 @@
           <h3 id="hyundaiThanhCong">
             Hyundai Thanh Cong Vietnam Auto Assembly Joint Stock Company
           </h3>
-          <h2 class="section-title" id="experienceTitle">Work Experience</h2>
-          <h3>Technical Manager - Automation Engineer</h3>
           <p>
             <strong id="position2">Position:</strong> Technical Manager -
             Automation Engineer
@@ -312,7 +311,7 @@
             <strong id="position3">Position:</strong> Smart Building Automation
             Engineer
           </p>
-          <p><strong id="period3">Period:</strong> 2010 - 2013</p>
+          <p><strong id="period3">Period:</strong> 2010 - 2012</p>
           <p><strong id="details3">Details:</strong></p>
           <ul>
             <p>
@@ -340,11 +339,17 @@
         <div class="section">
           <h2 class="section-title" id="educationTitle">Education</h2>
           <h3 id="bUt">Technical University of Berlin</h3>
-          <p><strong id="degree1">Degree:</strong> MSc Electrotechnik</p>
+          <p>
+            <strong id="degree1">Degree:</strong
+            ><span id="msc">MSc in Electrical Engineering</span>
+          </p>
           <p><strong id="period4">Period:</strong> 2014-2018</p>
           <hr class="divider" />
           <h3 id="hUst">Hanoi University of Science and Technology</h3>
-          <p><strong id="degree2">Degree:</strong> Kỹ sư điều khiển tự động</p>
+          <p>
+            <strong id="degree2">Degree:</strong>
+            <span id="automationEngineer2">Automation Engineer</span>
+          </p>
           <p><strong id="period5">Period:</strong> 2005 - 2010</p>
         </div>
       </div>
@@ -392,6 +397,7 @@
           niemtinCompany: "Niềm Tin Limited Liability Company",
           hUst: "Hanoi University of Science and Technology",
           bUt: "Technical University of Berlin",
+          msc: " MSc in Electrical Engineering",
         },
         vi: {
           introduction:
@@ -433,6 +439,7 @@
           niemtinCompany: "Công ty trách nhiệm hữu hạn Niềm Tin",
           hUst: "Đại học bách khoa Hà Nội",
           bUt: "Đại học kỹ thuật Berlin",
+          msc: " Thạc sĩ Điều khiển tự động",
         },
         de: {
           introduction:
@@ -474,6 +481,7 @@
           niemtinCompany: "Niềm Tin Gesellschaft mit beschränkter Haftung",
           hUst: "Technische Universität Hanoi",
           bUt: "Technische Universität Berlin",
+          msc: " MSc Electrotechnik",
         },
       };
 
@@ -499,6 +507,8 @@
           langData.automationEngineer;
         document.getElementById("crossPlatformDeveloper").innerText =
           langData.crossPlatformDeveloper;
+        document.getElementById("crossPlatformDeveloper2").innerText =
+          langData.crossPlatformDeveloper;
         document.getElementById("phoneNumber").innerText = langData.phoneNumber;
         document.getElementById("position1").innerText = langData.position1;
         document.getElementById("position2").innerText = langData.position2;
@@ -519,6 +529,9 @@
           langData.niemtinCompany;
         document.getElementById("hUst").innerText = langData.hUst;
         document.getElementById("bUt").innerText = langData.bUt;
+        document.getElementById("msc").innerText = langData.msc;
+        document.getElementById("automationEngineer2").innerText =
+          langData.automationEngineer;
       }
     </script>
   </body>
